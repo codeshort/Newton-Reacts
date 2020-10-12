@@ -1,26 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import VideoPlayer from 'react-video-js-player'
+import Happy from "./video/song.mp4";
+import Img from "C:/Users/user/Desktop/video-things/src/video/Unsplash_Image.jpg"
+const VideoJs = () =>{
+  const videoSrc = Happy;
+  const image = Img;
+  return(
+    <div className ="App">
+    <h1>VideoJS</h1>
+    <VideoPlayer
+    src ={videoSrc}
+    poster ={image}
+    data-setup='{"fluid": true, "aspectRatio": "1:1"}'
+    width = "720"
+    height = "420"
+    />
     </div>
   );
-}
-
-export default App;
+};
+export default VideoJs;
